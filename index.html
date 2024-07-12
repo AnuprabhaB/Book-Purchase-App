@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Home</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+
+
+    <!-- Here are te css files for the design -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/popularBooks.css">
+    <link rel="stylesheet" href="styles/currentReading.css">
+    <link rel="stylesheet" href="styles/bookshelfAudio.css">
+</head>
+<body>
+
+    <nav class="nav_container">
+        <!-- <div class="circle"></div> -->
+        <a href="#" class="logo">
+            <img src="navimages/logo.png">
+        </a>
+        <div class="class_menu">
+            <ul class="nav_list">
+                <li class="nav_items">
+                    <a href="index.html" class="nav_link">
+                        <img src="navimages/home.png">
+                        
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="notifications.html" class="nav_link">
+                        <img src="navimages/bell.png">
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="library.html" class="nav_link">
+                        <img src="navimages/book.png">
+                        
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="cart.html" class="nav_link">
+                        <img src="navimages/cart.png">
+                        
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="settings.html" class="nav_link">
+                        <img src="navimages/settings.png">
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="current_reading" data-book-id="5c0f8d5e-5b72-42a1-9051-8e907473a942">
+            <div class="continue_text">Continue</div>
+            <img src="books/Book 12.png"> 
+        </div>
+    </nav>
+
+     <header>
+        <div class="Intro_text" id="introText">
+            <p>Good Morning <span>Sara</span> ! Welcome Back !</p>
+        </div>
+        
+        <div class="profile_details">
+            <a href="profile.html">
+                <img src="navimages/profile.png">
+                </a>
+                <p class="name">Sara Marque</p>
+              
+            </div>
+        
+     </header>
+     <div class="search_container">
+        <div class="search_content">
+            <img class="search_logo" src="navimages/search.png">
+            <input type="search" placeholder="Search your books here" class="search_bar">
+        </div>
+        <p>Audio Books</p>
+        <p>E - Books</p>
+     </div>
+
+
+    <div id="popular_today" class="popular_class">Popular Today</div>
+     <div class="popular_books_today popular_books_grid">
+
+    </div>
+
+    <div class="continue_reading_class">
+        Continue Reading
+    </div>
+    <div class="currently_reading_books currently_reading_books_grid">
+    </div>
+
+    <div class="best_books_shelf_class">
+       Best Books Of the Day
+    </div>
+    <div class="best_book_shelf">
+        <img src="Shelf_Stand.png" class="book_shelf_image">
+
+        <div class="best_book_shelf_js">
+        
+        </div>
+    </div>
+
+    <div class="audio_books_class">
+        Explore our Audio Books
+    </div>
+    <div class="audio_books_grid audio_books_js">
+
+    </div>
+    
+
+
+    <script src="scripts/navbar.js">   
+    </script>
+    <script type="module" src="scripts/home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Library</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="styles/library.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/viewbook.css">
+
+</head>
+<body>
+
+    <nav class="nav_container">
+        <!-- <div class="circle"></div> -->
+        <a href="#" class="logo">
+            <img src="navimages/logo.png">
+        </a>
+        <div class="class_menu">
+            <ul class="nav_list">
+                <li class="nav_items">
+                    <a href="index.html" class="nav_link">
+                        <img src="navimages/home.png">
+                        
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="notifications.html" class="nav_link">
+                        <img src="navimages/bell.png">
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="library.html" class="nav_link">
+                   
+                        <img src="navimages/book.png">
+                        
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="cart.html" class="nav_link">
+                        <img src="navimages/cart.png">
+                        
+                    </a>
+                </li>
+                <li class="nav_items">
+                    <a href="settings.html" class="nav_link">
+                        <img src="navimages/settings.png">
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="current_reading" data-book-id="5c0f8d5e-5b72-42a1-9051-8e907473a942">
+            <div class="continue_text">Continue</div>
+            <img src="books/Book 12.png"> 
+        </div>
+    </nav>
+
+    <header>
+        <div class="search_container_library">
+            <div class="search_content">
+                <img class="search_logo" src="navimages/search.png">
+                <input type="search" placeholder="Search your books here" class="search_bar">
+            </div>
+            <p>Audio Books</p>
+            <p>E - Books</p>
+        </div>
+        <div class="profile_details_library">
+            <a href="profile.html">
+                <img src="navimages/profile.png">
+                </a>
+            <p>Sara Marque</p>
+        </div>
+     </header>
+    <div class="book_shelf_library">
+        <div class="purchased">
+        <p class="purchase" style="font-family:Kanit,sans-serif;">Purchased</p>
+        <img src="Shelf_Stand.png" class="shelf_img">
+        <div class="shelf1"></div>
+        </div>
+        <div class="currently">
+            <p class="current">Currently Reading</p>
+            <img src="Shelf_Stand.png" class="shelf_img">
+            <div class="shelf2"></div>
+        </div>
+        <div class="next">
+            <p class="next">Next up</p>
+            <img src="Shelf_Stand.png" class="shelf_img">
+            <div class="shelf3"></div>
+        </div>
+       <div class="finish">
+        <p class="finished">Finished</p>
+        <img src="Shelf_Stand.png" class="shelf_img">
+        <div class="shelf4"></div>
+       </div>
+       <div class="like">
+        <p class="liked">Liked</p>
+        <img src="Shelf_Stand.png" class="shelf_img">
+        <div class="shelf5"></div>
+       </div>
+       <div class="download">
+        <p class="downloads">Downloads</p>
+        <img src="Shelf_Stand.png" class="shelf_img">
+        <div class="shelf6"></div>
+       </div>
+    </div>
+
+    <script src="scripts/navbar.js"></script>
+    <script type="module" src="scripts/library.js">
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Settings</title>
+
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/variables.css">
+
+    </head>
+    <body>
+
+        <nav class="nav_container">
+            <!-- <div class="circle"></div> -->
+            <a href="#" class="logo">
+                <img src="navimages/logo.png">
+            </a>
+            <div class="class_menu">
+                <ul class="nav_list">
+                    <li class="nav_items">
+                        <a href="index.html" class="nav_link">
+                            <img src="navimages/home.png">
+                            
+                        </a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="notifications.html" class="nav_link">
+                            <img src="navimages/bell.png">
+                        </a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="library.html" class="nav_link">
+                            <img src="navimages/book.png">
+                            
+                        </a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="cart.html" class="nav_link">
+                            <img src="navimages/cart.png">
+                            
+                        </a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="settings.html" class="nav_link">
+                            <img src="navimages/settings.png">
+                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="current_reading" data-book-id="5c0f8d5e-5b72-42a1-9051-8e907473a942">
+                <div class="continue_text">Continue</div>
+                <img src="books/Book 12.png"> 
+            </div>
+        </nav>
+        
+        <header>
+            <div class="header-content">
+                <h2>Settings</h2>
+                <div class="profile_details_library">
+                    <img src="navimages/profile.png" alt="Profile">
+                    <p>Sara Marque</p>
+                </div>
+            </div>
+        </header>
+        <div class="settings-container">
+           
+    
+            <div class="settings-columns">
+                <div class="setting-column">
+                    <div class="setting-section">
+                        <h3>Account Settings</h3>
+                        <button>Edit Profile</button>
+                        <button>Change Password</button>
+                        <button>Manage Subscriptions</button>
+                    </div>
+    
+                    <div class="setting-section">
+                        <h3>Reading Preferences</h3>
+                        <label for="font-size">Font Size</label>
+                        <input type="range" id="font-size" min="10" max="30">
+                        <label for="font-style">Font Style</label>
+                        <select id="font-style">
+                            <option>Serif</option>
+                            <option>Sans-serif</option>
+                            <option>Monospace</option>
+                        </select>
+                        <label for="background-color">Background Color</label>
+                        <select id="background-color">
+                            <option>Light</option>
+                            <option>Dark</option>
+                            <option>Sepia</option>
+                        </select>
+                        <label for="brightness">Brightness</label>
+                        <input type="range" id="brightness" min="0" max="100">
+                    </div>
+                </div>
+    
+                <div class="setting-column">
+                    <div class="setting-section">
+                        <h3>Notifications</h3>
+                        <label for="push-notifications">Push Notifications</label>
+                        <input type="checkbox" id="push-notifications">
+                        <label for="email-notifications">Email Notifications</label>
+                        <input type="checkbox" id="email-notifications">
+                        <label for="reminder-settings">Reminder Settings</label>
+                        <input type="time" id="reminder-settings">
+                    </div>
+    
+                    <div class="setting-section">
+                        <h3>Library Settings</h3>
+                        <label for="sort-order">Sort Order</label>
+                        <select id="sort-order">
+                            <option>Title</option>
+                            <option>Author</option>
+                            <option>Date Added</option>
+                        </select>
+                        <label for="view-options">View Options</label>
+                        <select id="view-options">
+                            <option>List View</option>
+                            <option>Grid View</option>
+                        </select>
+                        <label for="download-preferences">Download Preferences</label>
+                        <select id="download-preferences">
+                            <option>Automatic</option>
+                            <option>Manual</option>
+                        </select>
+                    </div>
+    
+                    <div class="setting-section">
+                        <h3>Audio Settings</h3>
+                        <label for="playback-speed">Playback Speed</label>
+                        <input type="range" id="playback-speed" min="0.5" max="2" step="0.1">
+                        <label for="audio-quality">Audio Quality</label>
+                        <select id="audio-quality">
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                        <label for="audio-download-options">Download Options</label>
+                        <select id="audio-download-options">
+                            <option>Automatic</option>
+                            <option>Manual</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+
+        <script src="scripts/navbar.js">
+
+        </script>
+    </body>
+</html>

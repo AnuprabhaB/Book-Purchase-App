@@ -1,0 +1,68 @@
+body{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.icon_1 img{
+    width:24px;
+    height:24px;
+}
+.icon_2 img{
+    width:38px;
+    height:19px;
+}
+.book_elements{
+    display:flex;
+    position:fixed;
+    right:0;
+    top:100px;
+    flex-direction: column;
+    padding-top:40px;
+    row-gap: 40px;
+    background-color: var(--brown);
+    align-items: center;
+    width:70px;
+    height:320px;
+    border-radius: 36px 0px 0px 36px;
+}
+.chevron img{
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:50px;
+}
+.chapter_name{
+    font-family: var(--sec-font);
+    font-size: xx-large;
+    margin-left: 40px;
+}
+.book_para1{
+    font-family: var(--sec-font);
+    font-weight: 200;
+    line-height: 2;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 120px;
+    text-align: justify;
+    margin-left: 60px;
+}
+.book_para2{
+    font-family: var(--sec-font);
+    font-weight: 200;
+    line-height: 2;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-right: 120px;
+    text-align: justify;
+    margin-left: 60px;
+}
+.book_para1::first-letter{
+    font-family: Kings, 'cursive';
+    font-weight: bold;
+    font-size: 90px;
+    float: left;
+    line-height: 0.8;
+    margin-right: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,25 @@
+
+body {
+    margin-left:130px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.video_container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Adjust the margin as needed */
+}
+
+/* Optional: Make the iframe responsive */
+.video_container iframe {
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+@media (max-width:700px){
+    body{
+        margin-left: 120px;
+    }
+    
+}

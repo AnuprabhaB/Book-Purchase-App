@@ -1,0 +1,531 @@
+ .audio_container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 90px;
+    column-gap: 40px;
+}
+body{
+    margin-top: 0px;
+}
+.rectangle_audio{
+    background-color: var(--main-bg-color);
+    width:1185px;
+    height:550px;
+    position: absolute;
+    top:350px;
+    z-index: -1;
+}
+.arrow_indicators_audio img{
+    width:44px;
+    height:40px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+.arrow_indicators_audio{
+    display:flex;
+    flex-direction: column;
+    margin-top:50px;
+}
+.audio_display_image img{
+    width:381.4px;
+    height:369.66px;
+}
+.audio_display_image{
+    position: relative;
+    top:0px;
+}
+.audio_content{
+    margin-top: 50px;
+}
+
+.buttons{
+    display:flex;
+    column-gap: 30px;
+}
+.cart_image{
+    width:20px;
+    height:20px;
+    margin-left: 5px;
+}
+.stars_image{
+    width:150px;
+}
+.buy_now{
+    cursor:pointer;
+    background-color: var(--brown);
+    font-size: medium;
+    letter-spacing: 2px;
+    padding:8px 12px;
+    border-radius: 6.41px;
+    border-width: 1.28;
+    width:121px;
+    height:38px;
+    box-shadow: 0 0 3px rgba(93, 92, 92, 0.4);
+}
+.add_to_cart{
+    cursor: pointer;
+    border-radius: 6.41px;
+    border-width: 1.28;
+    font-size: medium;
+    font-family: var(--main-font);
+    letter-spacing: 2px;
+    padding:6px 18px;
+    background-color:white;
+}
+.added_to_cart{
+    color:black;
+    cursor: default;
+    border-color: black;
+}
+.added_to_cart img{
+    content:url('checkmark.png');
+}
+.add_to_cart_button_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.book_name{
+    font-family: var(--sec-font);
+    font-size: 50px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.book_price{
+    font-family: var(--main-font);
+    font-size: 25px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.like_button{
+    position: absolute;
+    width:60px;
+    height:60px;
+    right:190px;
+    top:120px;
+}
+.head{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 23px;
+}
+.control_bar{
+    width:800px;
+    height:120px;
+    margin-left: 110px;
+}
+.audio_control{
+    position: relative;
+}
+.audio_content_container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 120px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+.synopsis_para{
+    line-height: 2;
+}
+.review{
+    font-family: var(--main-font);
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+.review_image{
+    width:630.48px;
+    height:576.27px; 
+    width: 600px; 
+    height: auto; 
+}  
+.review_container{
+    position: relative;
+}
+.reviews{
+    position:absolute;
+    width:924.17px;
+    height:508.13px;
+    right:1px;
+}
+.other_works_container{
+    display:flex;
+    column-gap: 10px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+.other_products_container img{
+    width:197px;
+    height:200px;
+}
+.other_products_container p{
+    font-family: var(--main-font);
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 60px;
+} 
+
+.pause {
+    width: 40px;
+    height: 45px;
+    position: absolute;
+    z-index: 1000;
+    top: 86px;
+    right: 715px;
+    cursor: pointer;
+}
+.play {
+    width: 30px;
+    height: 35px;
+    position: absolute;
+    z-index: 1000;
+    top: 89px;
+    right: 715px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 830px;
+    height: 8px;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    background: #ddd;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px; 
+    background: #888; 
+    cursor: pointer;
+    border-radius: 50%; 
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    margin-top: -3.5px;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 15px; 
+    height: 15px; 
+    background: #888; 
+    cursor: pointer;
+    border-radius: 50%; 
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* IE */
+input[type=range]::-ms-thumb {
+    width: 15px; 
+    height: 15px; 
+    background: #888; 
+    cursor: pointer;
+    border-radius: 50%; 
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Webkit browsers: range track */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd; 
+    border-radius: 5px;
+}
+
+/* Firefox: range track */
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd; 
+    border-radius: 5px;
+}
+
+/* IE: range track */
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd; 
+    border-radius: 5px;
+    border-color: transparent;
+    color: transparent;
+}
+
+@media (max-width:1300px){
+    .audio_container{
+        display: flex;
+        flex-direction: row;
+        margin-left: 90px;
+        column-gap: 40px;
+    }
+    body{
+        margin-top: 0px;
+    }
+    .rectangle_audio{
+        background-color: var(--main-bg-color);
+        width:1100px;
+        height:550px;
+        position: absolute;
+        top:350px;
+        z-index: -1;
+    }
+    .arrow_indicators_audio img{
+        width:44px;
+        height:40px;
+        margin-top: 20px;
+        cursor:pointer;
+    }
+    .arrow_indicators_audio{
+        display:flex;
+        flex-direction: column;
+        margin-top:50px;
+    }
+    .audio_display_image img{
+        width:381.4px;
+        height:369.66px;
+    }
+    .audio_display_image{
+        position: relative;
+        top:0px;
+    }
+    .audio_content{
+        margin-top: 50px;
+    }
+    
+    .buttons{
+        display:flex;
+        column-gap: 30px;
+    }
+    .cart_image{
+        width:20px;
+        height:20px;
+        margin-left: 5px;
+    }
+    .stars_image{
+        width:150px;
+    }
+    .buy_now{
+        cursor:pointer;
+        background-color: var(--brown);
+        font-size: medium;
+        letter-spacing: 2px;
+        padding:8px 12px;
+        border-radius: 6.41px;
+        border-width: 1px;
+        width:121px;
+        height:38px;
+        box-shadow: 0 0 3px rgba(93, 92, 92, 0.4);
+    }
+    .add_to_cart{
+        cursor: pointer;
+        border-radius: 6.41px;
+        border-width: 1px;
+        font-size: medium;
+        font-family: var(--main-font);
+        letter-spacing: 2px;
+        padding:6px 18px;
+        background-color:white;
+    }
+    .added_to_cart{
+        color:black;
+        cursor: default;
+        border-color: black;
+    }
+    .added_to_cart img{
+        content:url('checkmark.png');
+    }
+    .add_to_cart_button_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .book_name{
+        font-family: var(--sec-font);
+        font-size: 50px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    .book_price{
+        font-family: var(--main-font);
+        font-size: 25px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    .like_button{
+        position: absolute;
+        width:60px;
+        height:60px;
+        right:80px;
+        top:90px;
+    }
+    .head{
+        font-family: var(--main-font);
+        font-weight: 500;
+        font-size: 23px;
+    }
+    .control_bar{
+        width:800px;
+        height:120px;
+        margin-left: 110px;
+    }
+    .audio_content_container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 120px;
+        margin-left: 80px;
+        margin-top: 50px;
+    }
+    .synopsis_para{
+        line-height: 2;
+    }
+    .review{
+        font-family: var(--main-font);
+        font-size: 25px;
+        font-weight: 500;
+        margin-left: 10px;
+        margin-top: 60px;
+    }
+    .review_image{
+        width:630.48px;
+        height:576.27px; 
+        width: 600px; 
+        height: auto; 
+    }  
+    .review_container{
+        position: relative;
+    }
+    .reviews{
+        position:absolute;
+        width:750px;
+        height:508.13px;
+        right:1px;
+    }
+    .other_works_container{
+        display:flex;
+        column-gap: 10px;
+        margin-left: 10px;
+        margin-bottom: 50px;
+    }
+    .other_products_container img{
+        width:170px;
+        height:170px;
+    }
+    .other_products_container p{
+        font-family: var(--main-font);
+        font-size: 25px;
+        font-weight: 500;
+        margin-left: 10px;
+        margin-top: 10px;
+    } 
+    .pause {
+        width: 40px;
+        height: 45px;
+        position: absolute;
+        z-index: 1000;
+        top: 86px;
+        right: 576px;
+        cursor: pointer;
+    }
+    
+    .play {
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        z-index: 1000;
+        top: 89px;
+        right: 576px;
+        cursor: pointer;
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+    
+input[type=range] {
+    -webkit-appearance: none;
+    width: 830px;
+    height: 8px;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    background: #ddd; 
+}
+
+/* Webkit browsers */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px; 
+    background: #888; 
+    cursor: pointer;
+    border-radius: 50%; 
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    margin-top: -3.5px; 
+}
+
+/* Firefox */
+input[type=range]::-moz-range-thumb {
+    width: 15px; 
+    height: 15px;
+    background: #888;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* IE */
+input[type=range]::-ms-thumb {
+    width: 15px; 
+    height: 15px; 
+    background: #888; 
+    cursor: pointer;
+    border-radius: 50%; 
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* Webkit browsers: range track */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd; 
+    border-radius: 5px;
+}
+
+/* Firefox: range track */
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd; 
+    border-radius: 5px;
+}
+
+/* IE: range track */
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd; 
+    border-radius: 5px;
+    border-color: transparent;
+    color: transparent;
+}
+
+
+    
+}

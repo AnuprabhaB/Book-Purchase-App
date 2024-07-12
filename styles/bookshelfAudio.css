@@ -1,0 +1,924 @@
+.best_books_shelf_class,.audio_books_class{
+    font-family: var(--sec-font);
+    font-size: x-large;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.book_shelf_image{
+    position:relative;
+    width:1250px;
+    height: 220px;
+}
+.best_book_shelf{
+    position: relative;
+}
+.book_shelf_container{
+    position:absolute;
+    display:flex;
+    flex-direction:row;
+    column-gap: 80px;
+    left:70px;
+    top:22px;
+}
+.book_in_shelf_image{
+    width:89px;
+    height:122px;
+    transition: transform 0.3s;
+    cursor:pointer;
+}
+
+.book_in_shelf_image:hover {
+    transform: scale(1.1); /* Scale up the hovered book */
+    z-index: 1; /* Ensure hovered book appears above others */
+}
+
+.audio_books_grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+}
+.audio_book_container{
+    display:flex;
+    position:relative;
+}
+
+.audio_book_image img{
+    width:197px;
+    height:193px;
+    transition: transform 0.3s;
+}
+.like_button_audio img{
+    width:40px;
+    height:40px;
+}
+.like_button_audio{
+    position:absolute;
+    display:none;
+    left:30px;
+    top:30px;
+    transform: translate(-50%, -50%);
+}
+.audio_book_container:hover .like_button_audio{
+    display:block;
+}
+.audio_book_container:hover .audio_book_image img{
+    transform: scale(1.1);
+}
+.play_button{
+    background-color: var(--brown);
+    font-size: medium;
+    padding:6px;
+    border-radius: 6.41px;
+    border-width: 1.28;
+    width:110px;
+    height:38px;
+    box-shadow: 0 0 3px rgba(93, 92, 92, 0.4);
+    cursor: pointer;
+}
+.audio_book_name{
+    font-family: var(--sec-font);
+    font-size: medium;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.audio_book_content_container{
+    margin-left: 20px;
+}
+
+@media (max-width: 1365px){
+    .best_books_shelf_class {
+        font-size: x-large; /* Adjust the font size */
+        margin-top: 20px; /* Adjust the top margin */
+        margin-bottom: 20px; /* Adjust the bottom margin */
+    }
+
+    .book_shelf_image {
+        width: 1150px; /* Adjust the shelf width */
+        height: 250px; /* Adjust the shelf height */
+    }
+
+    .book_shelf_container {
+        column-gap: 50px; /* Adjust the gap between books */
+        left: 50px; /* Adjust the left position */
+        top: 15px; /* Adjust the top position */
+    }
+
+    .book_in_shelf_image {
+        width: 100px; /* Adjust the book width */
+        height: 150px; /* Adjust the book height */
+    }
+}
+
+@media (max-width: 1300px){
+    .best_books_shelf_class {
+        font-size: larger; /* Adjust the font size */
+        margin-top: 20px; /* Adjust the top margin */
+        margin-bottom: 20px; /* Adjust the bottom margin */
+    }
+    .view_button{
+        cursor:pointer;
+        background-color: var(--brown);
+        font-size: medium;
+        padding:8px;
+        border-radius: 6.41px;
+        border-width: 0.28px;
+        width:121px;
+        height:38px;
+        box-shadow: 0 0 3px rgba(93, 92, 92, 0.4);
+    }
+    .play_button {
+        width: 100px;
+        height: 30px; 
+        padding: 5px; 
+        font-size: small; 
+        border-width: 0.28px;
+    }
+    .book_shelf_image {
+        width: 1110px; /* Adjust the shelf width */
+        height: 290px; /* Adjust the shelf height */
+    }
+
+    .book_shelf_container {
+        column-gap: 30px; /* Adjust the gap between books */
+        left: 45px; /* Adjust the left position */
+        top: 15px; /* Adjust the top position */
+    }
+
+    .book_in_shelf_image {
+        width: 120px; /* Adjust the book width */
+        height: 170px; /* Adjust the book height */
+    }
+
+    .currently_reading_books_grid {
+        grid-template-columns: repeat(3, 1fr); 
+        row-gap: 20px; 
+        column-gap: 30px;
+        margin-left: 10px;
+    } 
+    
+    .continue_reading_class{
+        margin-bottom: 5px;
+        z-index: 0;
+        margin-top: 20px;
+        font-family: var(--sec-font);
+        font-size: x-large;
+        
+    }
+    .currently_reading_container{
+        display:flex;
+        position:relative;
+        flex-direction: row;
+        column-gap: 3px;
+        margin-top: 15px;
+    }
+    .currently_reading_book_img img{
+        width:110px;
+        height:150px;
+        transition: transform 0.3s;
+    }
+    .currently_reading_content{
+        margin-top:85px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width:200px;
+    }
+    .current_rating_progress_bar{
+        width:170px;
+        height:12px;
+    }
+    .bg_current{
+        position: absolute;
+        top:80px;
+        width:350px;
+        height:100px;
+        z-index: -1;
+        border-radius: 15.94px;
+    }
+    .current_book_name{
+        font-family: Kanit,sans-serif;
+        font-size: medium;
+        font-weight: 300;
+        font-style: normal;
+        color:white;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    .current_author_name {
+        font-family: Kanit,sans-serif;
+        font-style: normal;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color:white;
+    }
+
+
+}
+
+@media(max-width:1150px){
+    .best_books_shelf_class {
+        font-size: larger; /* Adjust the font size */
+        margin-top: 50px; /* Adjust the top margin */
+        margin-bottom: 20px; /* Adjust the bottom margin */
+    }
+
+    .book_shelf_image {
+        width: 900px; /* Adjust the shelf width */
+        height: 200px; /* Adjust the shelf height */
+    }
+
+    .book_shelf_container {
+        column-gap: 40px; /* Adjust the gap between books */
+        left: 45px; /* Adjust the left position */
+        top: 15px; /* Adjust the top position */
+    }
+
+    .book_in_shelf_image {
+        width: 80px; /* Adjust the book width */
+        height: 120px; /* Adjust the book height */
+    }
+
+
+     /* make the audio container responsive */
+
+    .audio_book_image img {
+        width: 150px; /* Adjust the audio book image width */
+        height: 150px; /* Adjust the audio book image height */
+    }
+
+    .like_button_audio img {
+        width: 30px; /* Adjust the like button image width */
+        height: 30px; /* Adjust the like button image height */
+    }
+
+    .play_button {
+        width: 100px; /* Adjust the play button width */
+        height: 30px; /* Adjust the play button height */
+        padding: 5px; /* Adjust the padding */
+        font-size: small; /* Adjust the font size */
+    }
+
+    .audio_book_name {
+        font-size: 18px; /* Adjust the audio book name font size */
+    }
+
+    .audio_book_content_container {
+        margin-left: 15px; /* Adjust the margin */
+    }
+
+
+
+    
+    /* makes popular book container responsive */
+
+    .book_img {
+        width: 120px; /* Adjust the book image width */
+        height: 160px; /* Adjust the book image height */
+    }
+
+    .book_container {
+        margin-bottom: 15px; /* Adjust the margin */
+    }
+
+    .like_button img {
+        width: 30px; /* Adjust the like button image width */
+        height: 30px; /* Adjust the like button image height */
+    }
+
+    .view_button {
+        width: 100px; /* Adjust the view button width */
+        height: 30px; /* Adjust the view button height */
+        padding: 5px; /* Adjust the padding */
+        font-size: small; /* Adjust the font size */
+    }
+
+    .book_name {
+        font-size: 18px; /* Adjust the book name font size */
+    }
+
+    .author_name {
+        font-size: 14px; /* Adjust the author name font size */
+    }
+
+    .rating_stars {
+        width: 100px; /* Adjust the rating stars width */
+    }
+
+    .book_price {
+        font-size: 18px; /* Adjust the book price font size */
+    }
+
+    .book_content_container {
+        margin-left: 20px; /* Adjust the margin */
+    }
+    .popular_class,.continue_reading_class{
+        font-size: larger;
+    }
+    
+}
+
+
+@media (max-width:1050px){
+    .best_books_shelf_class {
+        font-size: x-large;
+        margin-top: 50px; 
+        margin-bottom: 20px; 
+        margin-left: 10px;
+    }
+
+    .book_shelf_image {
+        width: 800px; /* Adjust the shelf width */
+        height: 200px; /* Adjust the shelf height */
+    }
+
+    .book_shelf_container {
+        column-gap: 25px; /* Adjust the gap between books */
+        left: 45px; /* Adjust the left position */
+        top: 15px; /* Adjust the top position */
+    }
+
+    .book_in_shelf_image {
+        width: 80px; /* Adjust the book width */
+        height: 120px; /* Adjust the book height */
+    }
+
+
+    /* makes popular book responsive */
+    .popular_books_grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+        row-gap: 15px; /* Adjust the row gap */
+        margin-left: 10px; /* Adjust the margin */
+    }
+
+    .book_img {
+        width: 150px; /* Adjust the book image width */
+        height: 200px; /* Adjust the book image height */
+    }
+
+    .book_container {
+        margin-bottom: 15px; /* Adjust the margin */
+    }
+
+    .like_button img {
+        width: 30px; /* Adjust the like button image width */
+        height: 30px; /* Adjust the like button image height */
+    }
+
+    .view_button {
+        width: 120px; /* Adjust the view button width */
+        height: 40px; /* Adjust the view button height */
+        padding: 3px; /* Adjust the padding */
+        font-size: large; /* Adjust the font size */
+    }
+
+    .book_name {
+        font-size: 24px; /* Adjust the book name font size */
+    }
+
+    .author_name {
+        font-size: 18px; /* Adjust the author name font size */
+    }
+
+    .rating_stars {
+        width: 100px; /* Adjust the rating stars width */
+    }
+
+    .book_price {
+        font-size: 20px; /* Adjust the book price font size */
+    }
+
+    .book_content_container {
+        margin-left: 30px; /* Adjust the margin */
+    }
+
+    .popular_class,.continue_reading_class{
+        font-size: x-large;
+    }
+}
+
+@media (max-width:970px){
+    .currently_reading_books_grid {
+        grid-template-columns: repeat(2, 1fr); /* Reduce the number of columns */
+        row-gap: 20px; /* Adjust the row gap */
+        column-gap: 30px;
+        margin-left: 20px;
+    } 
+
+    .audio_books_grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+        row-gap: 15px; /* Adjust the row gap */
+    }
+
+    .audio_book_image img {
+        width: 150px; /* Adjust the audio book image width */
+        height: 150px; /* Adjust the audio book image height */
+    }
+
+    .like_button_audio img {
+        width: 30px; /* Adjust the like button image width */
+        height: 30px; /* Adjust the like button image height */
+    }
+
+    .play_button {
+        width: 100px; /* Adjust the play button width */
+        height: 30px; /* Adjust the play button height */
+        padding: 5px; /* Adjust the padding */
+        font-size: small; /* Adjust the font size */
+    }
+
+    .audio_book_name {
+        font-size: 18px; /* Adjust the audio book name font size */
+    }
+
+    .audio_book_content_container {
+        margin-left: 15px; /* Adjust the margin */
+    }
+
+
+}
+
+@media (max-width:950px){
+    .best_books_shelf_class {
+        font-size: larger;
+        margin-top: 50px; 
+        margin-bottom: 20px; 
+        margin-left: 10px;
+    }
+
+    .book_shelf_image {
+        width: 700px; 
+        height: 170px; 
+    }
+
+    .book_shelf_container {
+        column-gap: 25px; 
+        left: 30px; 
+        top: 15px; 
+    }
+
+    .book_in_shelf_image {
+        width: 70px; 
+        height: 100px; 
+    }
+
+    .popular_class,.continue_reading_class,.audio_books_class{
+        font-size:larger;
+    }
+
+
+    /* currentreading responsive */
+
+    .currently_reading_books_grid{
+        display: grid;
+        row-gap: 30px;
+        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .continue_reading_class{
+        margin-bottom: 5px;
+        z-index: 0;
+        margin-top: 20px;
+        font-family: var(--sec-font);
+        font-size: x-large;
+        
+    }
+    .currently_reading_container{
+        display:flex;
+        position:relative;
+        flex-direction: row;
+        column-gap: 3px;
+        margin-top: 15px;
+    }
+    .currently_reading_book_img img{
+        width:110px;
+        height:150px;
+        transition: transform 0.3s;
+    }
+    .currently_reading_content{
+        margin-top:85px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width:200px;
+    }
+    .current_rating_progress_bar{
+        width:140px;
+    }
+    .bg_current{
+        position: absolute;
+        top:80px;
+        width:350px;
+        height:90px;
+        z-index: -1;
+        border-radius: 15.94px;
+    }
+    .current_book_name{
+        font-family: Kanit,sans-serif;
+        font-size: medium;
+        font-weight: 300;
+        font-style: normal;
+        color:white;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    .current_author_name {
+        font-family: Kanit,sans-serif;
+        font-style: normal;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color:white;
+    }
+
+    .view_button {
+        width: 100px; /* Adjust the view button width */
+        height: 30px; /* Adjust the view button height */
+        padding: 3px; /* Adjust the padding */
+        font-size: medium; /* Adjust the font size */
+    }
+
+    .book_name {
+        font-size: 20px; /* Adjust the book name font size */
+    }
+
+    .author_name {
+        font-size: 15px; /* Adjust the author name font size */
+    }
+
+    .rating_stars {
+        width: 100px; /* Adjust the rating stars width */
+    }
+
+    .book_price {
+        font-size: 20px; /* Adjust the book price font size */
+    }
+}
+
+@media (max-width:900px){
+    .currently_reading_books_grid{
+        display: grid;
+        row-gap: 30px;
+        column-gap: 10px;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    .continue_reading_class{
+        margin-bottom: 5px;
+        z-index: 0;
+        margin-top: 20px;
+        font-family: var(--sec-font);
+        font-size: x-large;
+        
+    }
+    .currently_reading_container{
+        display:flex;
+        position:relative;
+        flex-direction: row;
+        column-gap: 0px;
+        margin-top: 15px;
+    }
+    .currently_reading_book_img img{
+        width:110px;
+        height:150px;
+        transition: transform 0.3s;
+    }
+    .currently_reading_content{
+        margin-top:85px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width:150px;
+    }
+    .current_rating_progress_bar{
+        width:140px;
+    }
+    .bg_current{
+        position: absolute;
+        top:80px;
+        width:300px;
+        height:90px;
+        z-index: -1;
+        border-radius: 15.94px;
+    }
+    .current_book_name{
+        font-family: Kanit,sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        font-style: normal;
+        color:white;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    .current_author_name {
+        font-family: Kanit,sans-serif;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color:white;
+    }
+    .popular_class,.continue_reading_class,.audio_books_class{
+        font-size:larger;
+    }
+
+}
+@media(max-width:850px){
+    .currently_reading_books_grid{
+        display: grid;
+        row-gap: 30px;
+        column-gap: auto;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .best_books_shelf_class {
+        font-size: larger;
+        margin-top: 50px; 
+        margin-bottom: 20px; 
+        margin-left: 10px;
+    }
+
+    .book_shelf_image {
+        width: 600px; 
+        height: 140px; 
+    }
+
+    .book_shelf_container {
+        column-gap: 20px; 
+        left: 30px; 
+        top: 15px; 
+    }
+
+    .book_in_shelf_image {
+        width: 60px; 
+        height: 80px; 
+    }
+
+    .popular_class,.continue_reading_class,.audio_books_class{
+        font-size:larger;
+    }
+
+    .popular_books_grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+        row-gap: 15px; /* Adjust the row gap */
+        margin-left: 10px; /* Adjust the margin */
+    }
+
+    .book_img {
+        width: 120px; /* Adjust the book image width */
+        height: 160px; /* Adjust the book image height */
+    }
+
+}
+
+@media (max-width:780px){
+
+    .currently_reading_books_grid{
+        display: grid;
+        row-gap: 30px;
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    
+    .continue_reading_class{
+        margin-bottom: 5px;
+        z-index: 0;
+        margin-top: 20px;
+        font-family: var(--sec-font);
+        font-size: x-large;   
+    }
+    .currently_reading_container{
+        display:flex;
+        position:relative;
+        flex-direction: row;
+        column-gap: 20px;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .currently_reading_book_img img{
+        width:130px;
+        height:180px;
+        transition: transform 0.3s;
+    }
+    .current_book_name{
+        font-family: Kanit,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color:white;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    .current_author_name {
+        font-family: Kanit,sans-serif;
+        font-style: normal;
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color:white;
+    }
+    
+    .currently_reading_content{
+        margin-top:89px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width:200px;
+    }
+    .current_rating_progress_bar{
+        width:180px;
+    }
+    .bg_current{
+        position: absolute;
+        top:80px;
+        width:370px;
+        height:110px;
+        z-index: -1;
+        border-radius: 15.94px;
+    }
+
+
+    .book_name {
+        font-size: 16px; /* Adjust the book name font size */
+    }
+
+    .author_name {
+        font-size: 12px; /* Adjust the author name font size */
+    }
+
+    .rating_stars {
+        width: 100px; /* Adjust the rating stars width */
+    }
+
+    .book_price {
+        font-size: 18px; /* Adjust the book price font size */
+    }
+    .view_button {
+        width: 80px; /* Adjust the view button width */
+        height: 30px; /* Adjust the view button height */
+        padding: 3px; /* Adjust the padding */
+        font-size: small; /* Adjust the font size */
+    }
+}
+
+@media (max-width:740px){
+    .best_books_shelf_class {
+        font-size: larger;
+        margin-top: 50px; 
+        margin-bottom: 20px; 
+        margin-left: 10px;
+    }
+
+    .book_shelf_image {
+        width: 500px; 
+        height: 120px; 
+        margin-left: 0px;
+    }
+
+    .book_shelf_container {
+        column-gap: 17px; 
+        left: 20px; 
+        top: 10px; 
+    }
+
+    .book_in_shelf_image {
+        width: 50px; 
+        height: 70px; 
+    }
+
+    .audio_books_grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px; 
+    }
+
+    .audio_book_image img {
+        width: 120px; 
+        height: 120px; 
+    }
+
+    .like_button_audio img {
+        width: 30px; 
+        height: 30px;
+    }
+
+    .play_button {
+        width: 65px; 
+        height: 25px; 
+        padding: 5px;
+        font-size: 10px; 
+    }
+
+    .audio_book_name {
+        font-size: 15px; 
+    }
+
+    .audio_book_content_container {
+        margin-left: 13px; 
+    }
+    .rating_stars{
+        width:90px;
+    }
+    .book_price{
+        font-size: small;
+    }
+}
+@media (max-width:700px){
+    .popular_books_grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+        row-gap: 10px; /* Adjust the row gap */
+        margin-left: 10px; /* Adjust the margin */
+    }
+
+    .book_img {
+        width: 100px; /* Adjust the book image width */
+        height: 140px; /* Adjust the book image height */
+    }
+    .book_name {
+        font-size: 13px; /* Adjust the book name font size */
+    }
+
+    .author_name {
+        font-size: 12px; /* Adjust the author name font size */
+    }
+
+    .rating_stars {
+        width: 100px; /* Adjust the rating stars width */
+    }
+
+    .book_price {
+        font-size: 16px; /* Adjust the book price font size */
+    }
+    .view_button {
+        width: 70px; /* Adjust the view button width */
+        height: 25px; /* Adjust the view button height */
+        padding: 3px; /* Adjust the padding */
+        font-size: 12px; /* Adjust the font size */
+    }
+    .popular_class,.continue_reading_class,.audio_books_class{
+        font-size:large;
+    }
+}
+
+@media (max-width:600px){
+    .popular_books_grid {
+        grid-template-columns: repeat(1, 1fr); /* Change to 2 columns */
+        row-gap: 15px; /* Adjust the row gap */
+        margin-left: 60px; /* Adjust the margin */
+    }
+
+    .book_img {
+        width: 120px; /* Adjust the book image width */
+        height: 160px; /* Adjust the book image height */
+    }
+    .currently_reading_container{
+        display:flex;
+        position:relative;
+        flex-direction: row;
+        column-gap: 20px;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    .audio_books_grid {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px; 
+        margin-left: 30px;
+    }
+
+    .audio_book_image img {
+        width: 120px; 
+        height: 120px; 
+    }
+
+    .like_button_audio img {
+        width: 30px; 
+        height: 30px;
+    }
+
+    .play_button {
+        width: 65px; 
+        height: 25px; 
+        padding: 5px;
+        font-size: 10px; 
+    }
+
+    .audio_book_name {
+        font-size: 15px; 
+    }
+
+    .audio_book_content_container {
+        margin-left: 13px; 
+    }
+    .rating_stars{
+        width:90px;
+    }
+}
